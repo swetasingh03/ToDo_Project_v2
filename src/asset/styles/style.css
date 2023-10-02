@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+    font-family: 'Mooli', sans-serif;
+    /* font-family: 'Roboto Flex', sans-serif; */
+    text-align: center;
+}
+
+.main-body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0e1538;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.todo-box{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 65px 88px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.todo-content-box{
+    z-index: 2;
+}
+
+.todo-box::before{
+content: "";
+position: absolute;
+width: 170px;
+height: 140%;
+background: linear-gradient(#00ccff,#d500f9);
+animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.todo-box::after{
+    content: "";
+   position: absolute;
+   background: #0e1538;
+   inset: 5px ;
+    }
+
+.todo-topbar {
+    color: white;
+}
+
+.todo-h3 {
+    margin-top: 20px;
+    color: white;
+}
+
+.todo-input-box {
+    display: flex;
+    margin-top: 20px;
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.todo-input {
+    width: 165%;
+    padding: 9px 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.todo-button {
+    color: #fff;
+    background-color: #ffaf3e;
+    border: none;
+    padding: 2px 11px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+}
+
+.todo-list-box {
+    margin-top: 20px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    width: 120%;
+}
+
+.todo-list-content {
+    width: 200%;
+    background-color: #0628d3;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding: 10px 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list-button {
+    /* background-color: #ffaf3e; */
+    padding: 3px 6px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
